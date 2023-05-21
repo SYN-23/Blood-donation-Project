@@ -1,0 +1,76 @@
+.container{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    /* background-color: #1B2A4A; */
+    
+    background-color: 	#62bdd8;
+    
+}
+.imageHolder img{
+    width: 49.35%;
+    margin-left: 50.6%;
+  
+}
+
+.loginForm{
+    position: absolute;
+    color: white;
+    margin-left: 20%;
+    margin-top: 10%;
+    /* border: 1px solid red; */
+    font-size: 32px;
+    
+}
+.loginForm p{
+    font-size: 20px;
+}
+.registerForm{
+    position: absolute;
+    color: white;
+    margin-left: 10%;
+    
+    margin-top: 10%;
+    /* border: 1px solid red; */
+    font-size: 27px; 
+}
+.input{
+    height: 25px;
+    width: 250px;
+    background-color: 	#3c9ebc;
+    border: none;
+    border-radius: 7px;
+    padding-left: 15px;
+    color: white;
+}
+.loginForm button{
+    margin-left: 25%;
+    margin-top: 25px;
+    background-color: rgb(66, 179, 216);
+    border-radius: 7px;
+    color: white;
+    width: 100px;
+    height: 30px;
+    border-color: #25bcea;
+    font-size: 20px;
+}
+
+.registerForm button{
+    margin-left: 40%;
+    margin-top: 25px;
+    background-color: rgb(66, 179, 216);
+    border-radius: 7px;
+    color: white;
+    width: 100px;
+    height: 30px;
+    border-color: #25bcea;
+    font-size: 20px;
+}
+form span{
+    color: blue;
+}
+.location{
+    display: flex;
+    flex-direction: row;
+    column-gap: 40px;
+}
