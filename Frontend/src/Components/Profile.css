@@ -71,6 +71,11 @@
 .image img{
     
     width: 97%;
-   
+    animation: floating infinite 5s linear;
 
 }
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 45px); }
+    100%   { transform: translate(0, -0px); }   
+  }
