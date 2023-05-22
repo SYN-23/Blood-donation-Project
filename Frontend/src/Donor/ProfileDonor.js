@@ -156,7 +156,7 @@ function ProfileDonor(){
 
            </div>
            <div className='image'>
-            <img src='profile background5.jpg' alt=""></img>
+            <img src="image3.jpg" alt=""></img>
            </div>
         </div>
     );
