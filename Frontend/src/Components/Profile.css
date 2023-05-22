@@ -62,16 +62,17 @@
     margin-bottom: 20px;
 }
 .image{
-    margin-left: 700px;
-    
+    margin-left: 860px;
+    width: 630px;
    
-    
+    position: absolute;
 }
 
 .image img{
-    
-    width: 97%;
+    margin-left:-60px;
+    width: 116%;
     animation: floating infinite 5s linear;
+    
 
 }
 @keyframes floating {
