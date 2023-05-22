@@ -153,7 +153,7 @@ function Profile(){
 
            </div>
            <div className='image'>
-            <img src='profile background5.jpg' alt=''></img>
+            <img src='%PUBLIC_URL%/profile background5.jpg' alt=''></img>
            </div>
         </div>
     );
