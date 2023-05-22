@@ -1,14 +1,15 @@
 .containerProfile{
-    margin-left: 140px;
+    margin-left: 100px;
     margin-top: 50px;
     font-size: 25px;
-    background-color: rgba(0, 0, 0, 0.171);
+    background: radial-gradient(circle, rgba(206, 36, 221, 0.536) 0%, rgba(29, 110, 139, 0.479) 100%);
     position: absolute;
     width: 580px;
     padding-left: 20px;
     padding-top: 20px;
     border-radius: 8px;
     color: white;
+    
 }
 .containerProfile input{
     width: 250px;
