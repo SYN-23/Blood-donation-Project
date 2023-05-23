@@ -28,7 +28,7 @@ function DonorList({profile,requestProf}){
          // get profile data of user
          if(donor_id !==''){
             axios
-            .get(`http://localhost:5000/getDiteals/${donor_id}` )
+            .get(`https://blood-donation-api-ng4t.onrender.com/getDiteals/${donor_id}` )
             .then((response)=>{
                 setUserName(response.data[0].name);
                 setUserPhoneNumber(response.data[0].phoneNumber);
@@ -87,7 +87,7 @@ function DonorList({profile,requestProf}){
             }
 
             axios
-        .post('http://localhost:5000/userToDonorRequest', registerData)
+        .post('https://blood-donation-api-ng4t.onrender.com/userToDonorRequest', registerData)
         .then(() => {
             
             console.log("Data Created added to database")
@@ -113,7 +113,7 @@ function DonorList({profile,requestProf}){
         }
 
         axios
-        .delete("http://localhost:5000/userToDonorDelete" ,{data:data})
+        .delete("https://blood-donation-api-ng4t.onrender.com/userToDonorDelete" ,{data:data})
         .then(() => {
             alert(`Request delete to ${email}`)
             console.log("Data Deleted From Database")

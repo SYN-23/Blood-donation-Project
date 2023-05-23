@@ -31,7 +31,7 @@ function RequestDonor({profile,id}){
     }       
 
      axios
-    .patch(`http://localhost:5000/updateDonor/${id}`, registerData)
+    .patch(`https://blood-donation-api-ng4t.onrender.com/updateDonor/${id}`, registerData)
     .then(() => {
         console.log("Data updated and added to database")
         //alert(`Your status change to ${message} `);
@@ -57,7 +57,7 @@ function RequestDonor({profile,id}){
     }
 
     axios
-    .post('http://localhost:5000/donorToUserAccept', requestData)
+    .post('https://blood-donation-api-ng4t.onrender.com/donorToUserAccept', requestData)
     .then(() => {
         console.log("Data Created added to database")
         alert(`You sucessfully aceepted request of ${userName}`)
@@ -84,7 +84,7 @@ function RequestDonor({profile,id}){
             donorEmail:donor_id,
         }
         axios
-        .delete('http://localhost:5000/userToDonorDelete' ,{data:data})
+        .delete('https://blood-donation-api-ng4t.onrender.com/userToDonorDelete' ,{data:data})
         .then(() => {
             alert(`Request delete to ${email}`)
             console.log("Data Deleted From Database")

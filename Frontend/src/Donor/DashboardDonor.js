@@ -56,7 +56,7 @@ function DashboardDonor(){
     //get diteals of donor for set the avialabe switch status
     if(donor_id !==''){
         axios
-        .get(`http://localhost:5000/getDitealsDonor/${donor_id}` )
+        .get(`https://blood-donation-api-ng4t.onrender.com/getDitealsDonor/${donor_id}` )
         .then((response)=>{
          
          setId(response.data[0]._id);

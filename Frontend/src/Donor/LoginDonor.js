@@ -32,7 +32,7 @@ function LoginDonor(){
 }
     const fetchData=()=>{
         axios
-        .post("http://localhost:5000/loginDonor",{email,password})
+        .post("https://blood-donation-api-ng4t.onrender.com/loginDonor",{email,password})
         .then((response)=>{
          setUser(response.data);
         })

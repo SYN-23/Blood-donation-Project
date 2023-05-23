@@ -32,7 +32,7 @@ function Dashboard(){
       // get diteals of donors who's are available
       {
       axios
-        .get("http://localhost:5000/getDitealsStatus/true" )
+        .get("https://blood-donation-api-ng4t.onrender.com/getDitealsStatus/true" )
         .then((response)=>{
          setProfile(response.data);
         })
@@ -46,7 +46,7 @@ function Dashboard(){
       // get diteals of donors who's are reuqested by current login user
       if(donor_id !==''){
       axios
-      .get(`http://localhost:5000/getRequestDiteals/${donor_id}` )
+      .get(`https://blood-donation-api-ng4t.onrender.com/getRequestDiteals/${donor_id}` )
         .then((message)=>{
          setRequestProfile(message.data);
          

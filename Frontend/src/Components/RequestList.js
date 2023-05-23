@@ -34,7 +34,7 @@ function RequestList({profile}){
             donorEmail:email
         }
         axios
-        .delete('http://localhost:5000/userToDonorDelete' ,{data:data})
+        .delete('https://blood-donation-api-ng4t.onrender.com/userToDonorDelete' ,{data:data})
         .then(() => {
             alert(`Request delete to ${email}`)
             console.log("Data Deleted From Database")

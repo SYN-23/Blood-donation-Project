@@ -38,7 +38,7 @@ function Profile(){
 
         if(donor_id !==''){
         axios
-        .get(`http://localhost:5000/getDiteals/${donor_id}` )
+        .get(`https://blood-donation-api-ng4t.onrender.com/getDiteals/${donor_id}` )
         .then((response)=>{
          setProfile(response.data);
          setId(response.data[0]._id);
@@ -80,7 +80,7 @@ function Profile(){
             }
 
         axios
-        .patch(`http://localhost:5000/updateUser/${id}`, registerData)
+        .patch(`https://blood-donation-api-ng4t.onrender.com/updateUser/${id}`, registerData)
         .then(() => {
             console.log("Data updated and added to database")
             alert('Profile Update Sucessdully')
