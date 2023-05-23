@@ -80,7 +80,7 @@ function DashboardDonor(){
      //get diteals by donor email of which user sent request to donor 
     if(donor_id !==''){
       axios
-      .get(`http://localhost:5000/getRequestdonor/${donor_id}` )
+      .get(`https://blood-donation-api-ng4t.onrender.com/getRequestdonor/${donor_id}` )
       .then((response)=>{
          setUserRequest(response.data);
          //console.log(userRequest);
@@ -159,7 +159,7 @@ function DashboardDonor(){
     }
 
     axios
-    .patch(`http://localhost:5000/updateDonor/${id}`, registerData)
+    .patch(`https://blood-donation-api-ng4t.onrender.com/updateDonor/${id}`, registerData)
     .then(() => {
         console.log("Data updated and added to database")
         alert(`Your status change to ${message} `);
