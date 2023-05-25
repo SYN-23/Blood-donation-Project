@@ -8,6 +8,8 @@ import RequestDonor from "./RequestDonor";
 function DashboardDonor(){
 
    const [userRequest,setUserRequest]=useState([]);
+   const [userName,setUserName]=useState("Anindita Sarkar");
+   const [userPhno,setUserPhno]=useState(2365478951);
       
      
     const[post,setPost]=useState([]);
@@ -96,11 +98,23 @@ function DashboardDonor(){
     
    getDate();
 
-   
+   if(donor_id !==''){
+    axios
+    .get(`https://blood-donation-api-ng4t.onrender.com/donorToUserAcceptDonor/${donor_id}` )
+    .then((response)=>{
+       setUserName(response.data[0].userName)
+       setUserPhno(response.data[0].userPhoneNumber)
+    })
+    .catch(err => {
+       console.error(err);
+       alert("Something Error Try again")
+     });
+
+   }
     
   
   
-   },[donor_id])
+   })
 
 
    function getDate(){
@@ -184,6 +198,7 @@ function DashboardDonor(){
      <div className="search">
         <input placeholder="Search donor by pincode" type="number" onChange={event=>setpinCode(event.target.value)}></input>
         <button onClick={handelSearch}>Search</button>
+      
      </div>
 
      <div className="requestsDonor">
@@ -194,8 +209,9 @@ function DashboardDonor(){
                     onChange={handleChange}
                 />
 
-         
-                
+        <div className="status1">
+        <h5 >You Accepted Request Of <span>{userName}</span> For Contact no: <span>{userPhno}</span></h5>      
+        </div>
          </div>
          <div className="timer">
             <h6>{`Timer : ${time} days left`}</h6>

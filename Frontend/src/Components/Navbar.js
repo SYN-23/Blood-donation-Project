@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 function Navbar(){
   const [donor_id, setDonor_id] = useState("");
   const [type,setType]=useState("");
+  
   let navigate = useNavigate();
   
   //login as a user function
@@ -85,7 +86,7 @@ function Navbar(){
           </div>
             ):(
               <div className='btnHolder'>
-              <h4>Log Out from your profile</h4>
+              <h4>Log Out from your {type} profile</h4>
             <button onClick={logOut}>Logout</button>
             </div>
             )

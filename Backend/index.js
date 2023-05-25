@@ -293,7 +293,27 @@ app.post('/donorToUserAccept',async(req,res)=>{
     }
     })
 
+app.get('/donorToUserAcceptUser/:userEmail' ,async(req,res)=>{
+    try{
+        const userEmail=req.params.userEmail;
+        const data = await Accept.find({userEmail:userEmail});
+        res.status(200).json(data)
+    }
+    catch(error){
+        res.status(500).json({message: error.message})
+    }
+})
 
+app.get('/donorToUserAcceptDonor/:donorEmail' ,async(req,res)=>{
+    try{
+        const donorEmail=req.params.donorEmail;
+        const data = await Accept.find({donorEmail:donorEmail});
+        res.status(200).json(data)
+    }
+    catch(error){
+        res.status(500).json({message: error.message})
+    }
+})
 
 
 //starting port 

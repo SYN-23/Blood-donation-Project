@@ -14,7 +14,9 @@ function Dashboard(){
    const [requestProfile,setRequestProfile]=useState([]);
 
    const[donor_id,setDonor_id]=useState("");
-
+   
+   const [userName,setUserName]=useState("Anindita Sarkar");
+   const [userPhno,setUserPhno]=useState(2365478951);
    
 
    useEffect(()=>{
@@ -56,6 +58,21 @@ function Dashboard(){
          alert("Something Error Try again")
        });
       }
+
+      
+   if(donor_id !==''){
+      axios
+      .get(`https://blood-donation-api-ng4t.onrender.com/donorToUserAcceptUser/${donor_id}` )
+      .then((response)=>{
+         setUserName(response.data[0].donorName)
+         setUserPhno(response.data[0].donorPhoneNumber)
+      })
+      .catch(err => {
+         console.error(err);
+         alert("Something Error Try again")
+       });
+  
+     }
       
 
    }
@@ -93,6 +110,8 @@ function Dashboard(){
      <div className="search">
         <input placeholder="Search donor by pincode" type="number" onChange={event=>setPinCode(event.target.value)}></input>
         <button onClick={handelSearch}>Search</button>
+        <h5>Your Request accepted by <span>{userName}</span> For Contact no: <span>{userPhno}</span></h5>
+        
      </div>
 
      <div className="requests">
