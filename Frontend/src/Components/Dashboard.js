@@ -15,8 +15,8 @@ function Dashboard(){
 
    const[donor_id,setDonor_id]=useState("");
    
-   const [userName,setUserName]=useState("Anindita Sarkar");
-   const [userPhno,setUserPhno]=useState(2365478951);
+   const [userName,setUserName]=useState("");
+   const [userPhno,setUserPhno]=useState(0);
    
 
    useEffect(()=>{
@@ -69,7 +69,7 @@ function Dashboard(){
       })
       .catch(err => {
          console.error(err);
-         alert("Something Error Try again")
+         //alert("Something Error Try again")
        });
   
      }

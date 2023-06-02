@@ -8,8 +8,8 @@ import RequestDonor from "./RequestDonor";
 function DashboardDonor(){
 
    const [userRequest,setUserRequest]=useState([]);
-   const [userName,setUserName]=useState("Anindita Sarkar");
-   const [userPhno,setUserPhno]=useState(2365478951);
+   const [userName,setUserName]=useState("");
+   const [userPhno,setUserPhno]=useState(0);
       
      
     const[post,setPost]=useState([]);
@@ -107,7 +107,7 @@ function DashboardDonor(){
     })
     .catch(err => {
        console.error(err);
-       alert("Something Error Try again")
+       //alert("Something Error Try again")
      });
 
    }
