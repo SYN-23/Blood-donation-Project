@@ -22,7 +22,7 @@ function RequestDonor({profile,id}){
     // accept request by donor 
     function send(e,userEmail,userName,userPinCode,userPhoneNumber,userBloodGroup,donorEmail,donorName,donorPinCode,donorPhoneNumber,donorBloodGroup){
            deleteRequest(donor_id,userEmail);
-           alert(donorBloodGroup)
+           //alert(donorBloodGroup)
            const registerData={
            
             "status":false,

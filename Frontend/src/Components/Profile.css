@@ -1,10 +1,10 @@
 .containerProfile{
     margin-left: 100px;
     margin-top: 50px;
-    font-size: 25px;
+    font-size: 38px;
     background: radial-gradient(circle, rgba(206, 36, 221, 0.536) 0%, rgba(29, 110, 139, 0.479) 100%);
     position: absolute;
-    width: 580px;
+    width: 680px;
     padding-left: 20px;
     padding-top: 20px;
     border-radius: 8px;
@@ -19,7 +19,7 @@
     color: black;
     
     /* background-color: rgba(0, 0, 0, 0.464); */
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     padding-left: 15px;
 }
@@ -54,13 +54,14 @@
 .name{
    display: flex;
    flex-direction: row; 
-   
-   column-gap: 20px;
+   padding-left: 20px;
+   column-gap: 35px;
    margin-bottom: 20px;
 }
 
 .bloodGroup{
     margin-bottom: 20px;
+    padding-left: 20px;
 }
 .image{
     margin-left: 860px;
@@ -70,8 +71,8 @@
 }
 
 .image img{
-    margin-left:-60px;
-    width: 116%;
+    margin-left:40px;
+    width: 145%;
     animation: floating infinite 5s linear;
     
 
